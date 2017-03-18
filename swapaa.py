@@ -5,6 +5,8 @@
 # Also cleans up non-unicode filenames.
 # Run this on a COPY of your data.  It is very likely to screw up.
 #
+# TODO:
+# Convert useless "test mode" into something more like a non-verbose dry-run.
 
 from mutagen.id3 import ID3, TPE1, TPE2
 from mutagen.flac import FLAC
