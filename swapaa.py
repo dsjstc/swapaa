@@ -13,6 +13,7 @@ import os.path
 import glob
 from unidecode import unidecode
 from pprint import pprint
+import csv
 
 #Globals for simplicity
 class g:
@@ -173,7 +174,9 @@ class MusicFile:
 		path = self.path
 		a = self.a
 		aa = self.aa
-		print( "%s,%s,%s" % (path, a, aa))
+		csvout = csv.writer(sys.stdout)
+		#csvline = str.format( "%s,%s,%s" % (path, a, aa) )
+		csvout.writerow((path, a, aa) )
 			
 #----------------------------------------------------------------------
 # File handling
